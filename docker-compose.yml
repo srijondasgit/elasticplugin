@@ -1,0 +1,17 @@
+version: '2.0'
+
+services: 
+    elasticsearch:
+        image: projectname_elasticsearch
+        build:
+            context: .
+            dockerfile: ./.docker/elastic/Dockerfile
+        expose:
+          - "9200"
+        ports:
+          - 9200:9200
+        environment:
+          - discovery.type=single-node
+          - script.allowed_types=inline
+          - script.allowed_contexts=filter
+          - "ES_JAVA_OPTS=-Xms512m -Xmx512m"

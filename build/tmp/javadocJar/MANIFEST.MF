@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Module-Origin: unknown
+Change: unknown
+X-Compile-Elasticsearch-Version: 7.11.1
+X-Compile-Lucene-Version: 8.7.0
+X-Compile-Elasticsearch-Snapshot: false
+Implementation-Title: com.projectname#plugin;0.0.1
+Implementation-Version: 0.0.1
+Built-Status: integration
+Built-By: root
+Built-OS: Linux
+Build-Date: 2021-05-12T23:19:46.731604Z
+Gradle-Version: 6.8.2
+Created-By: 12.0.2+10 (AdoptOpenJDK)
+Build-Java-Version: 12
+X-Compile-Target-JDK: 1.8
+X-Compile-Source-JDK: 1.8
+

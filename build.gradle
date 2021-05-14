@@ -1,0 +1,33 @@
+buildscript {
+  repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+  }
+
+  dependencies {
+    classpath "org.elasticsearch.gradle:build-tools:7.11.1"
+  }
+}
+
+apply plugin: 'java'
+
+compileJava {
+  sourceCompatibility = JavaVersion.VERSION_12
+  targetCompatibility = JavaVersion.VERSION_12
+}
+
+apply plugin: 'elasticsearch.esplugin'
+
+group = "com.projectname"
+version = "0.0.1"
+
+esplugin {
+  name 'contains-multiple'
+  description 'A script for finding documents that match a term a certain number of times'
+  classname 'com.projectname.containsmultiple.ContainsMultiplePlugin'
+  licenseFile rootProject.file('LICENSE.txt')
+  noticeFile rootProject.file('NOTICE.txt')
+}
+
+validateNebulaPom.enabled = false
